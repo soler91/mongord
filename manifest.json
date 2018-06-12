@@ -5,7 +5,7 @@
 	},
     
     "defs": {
-		"S_LOGIN": [9, 10],
+		"S_LOGIN": 10,
 		"S_USER_PAPERDOLL_INFO": 5,
 		"S_SHOW_AWESOMIUMWEB_SHOP": 1
 	}
