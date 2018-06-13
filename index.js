@@ -1,11 +1,30 @@
-const    Command = require('command')
+const    Command = require('command');
 
 module.exports = function gourd(dispatch) {
     const command = Command(dispatch)
     let enabled = true,
-        userName = "";
+        userName = "",
+        region = dispatch.base.region;
     
-    command.add('mongord', () => {
+    switch(region){
+        case "na":
+            region = "/"
+        break;
+        
+        case "eu":
+            region = "/" + region + "/"
+        break;
+        
+        case "ru":
+            region = "/" + region + "/"
+        break;
+        
+        default:
+            console.log("This region is not supported by moongourd.");
+        break;
+    }
+    
+    command.add(['mongord','mg'], () => {
         enabled = !enabled;
         command.message(`mongord enabled: ${enabled}`);
     });
@@ -22,7 +41,7 @@ module.exports = function gourd(dispatch) {
     
     function Open(name){
         dispatch.toClient('S_SHOW_AWESOMIUMWEB_SHOP', 1, {
-            link:`https://moongourd.com/results?player=${name}&area=1&boss=1&sort=timedesc`
+            link:`https://moongourd.com${region}results?player=${name}&area=1&boss=1&sort=timedesc`
         })
     }
     
