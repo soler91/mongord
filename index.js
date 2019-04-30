@@ -23,9 +23,11 @@ module.exports = function gourd(mod) {
 		mod.command.message(`mongord enabled: ${enabled}`)
 	})
 
-	mod.hook('S_LOGIN', 10, event => userName = event.name)
+	mod.game.on('enter_game', () => {
+        	userName = mod.game.me.name
+    	});
 
-	mod.hook('S_USER_PAPERDOLL_INFO', 5, event => {
+	mod.hook('S_USER_PAPERDOLL_INFO', 8, event => {
 		if (enabled && event.name != userName) Open(event.name)
 	})
 
