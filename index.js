@@ -14,7 +14,7 @@ module.exports = function gourd(mod) {
 			region = "/" + region + "/"
 			break;
 		default:
-			console.log("This region is not supported by moongourd.")
+			mod.warn("This region is not supported by moongourd.")
 			break;
 	}
 
