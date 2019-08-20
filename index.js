@@ -27,7 +27,7 @@ module.exports = function gourd(mod) {
         	userName = mod.game.me.name
     	});
 
-	mod.hook('S_USER_PAPERDOLL_INFO', 8, event => {
+	mod.hook('S_USER_PAPERDOLL_INFO', mod.majorPatchVersion >= 85 ? 10 : 9, event => {
 		if (enabled && event.name != userName) Open(event.name)
 	})
 
