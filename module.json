@@ -5,9 +5,7 @@
     "author": "Fruit",
     "description": "Searchs on moongourd for the inspected character.",
     "version": "1.0",
-    "servers": [
-        "https://raw.githubusercontent.com/soler91/mongord/master/"
-    ],
+    "servers": ["https://raw.githubusercontent.com/soler91/mongord/master/"],
     "options": {
         "niceName": "Mongord",
         "guiName": "Mongord"

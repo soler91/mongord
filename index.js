@@ -33,7 +33,7 @@ module.exports = function gourd(mod) {
 
 	function Open(name) {
 		mod.toClient('S_SHOW_AWESOMIUMWEB_SHOP', 1, {
-			link: `https://moongourd.com${region}results?player=${name}&area=1&boss=1&sort=timedesc`
+			link: encodeURI(`https://moongourd.com${region}results?player=${name}&area=1&boss=1&sort=timedesc`)
 		})
 	}
 }

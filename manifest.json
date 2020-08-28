@@ -1,6 +1,10 @@
 {
-	"files": {
-		"index.js": "4AD3FFE664FE8D08DA06D55DA8E4F4452AB00B8A21B1BCBCBE9A8CE4B2E0A701",
-		"module.json": "74CAA17D842CA9FC045D6F3F29F55FEF068960F95DBD503044A2CD74EF0EB661"
-	}
+    "files": {
+        "index.js": "1c87738adad9ace57bfa7140c9c2b5a6cc6e2e8393d3953a1700f4b06b5d0cd5",
+        "module.json": "43036c52aac58e7ca94fe8de0bc6355ad5b0cdb8268c3cab9532b2ee7f4475ea"
+    },
+    "defs": {
+        "S_SHOW_AWESOMIUMWEB_SHOP": 1,
+        "S_USER_PAPERDOLL_INFO": 11
+    }
 }
